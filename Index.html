@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+           text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+           color: rgb(152, 152, 225);
+           font-size: 1.03rem;
+        }
+
+        .left {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .firstSection > div {
+           width: 30%;
+        }
+
+        .leftSection {
+            width: 50%;
+            font-size: 2.5rem;           
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        #element {
+            font-size: 2.5rem;
+            color: blueviolet;
+        }
+
+        .hamburger {
+            display: none;
+        }
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+   <header>
+        <nav>
+    <div class="left">Harsh's Portfolio</div>
+
+    <!-- Hamburger icon — shows only on mobile -->
+    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Add class "nav-links" to your existing right div -->
+    <div class="nav-links right">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Skills</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+    </header> 
+
+    <main>
+    <!-- First Section -->
+        <section class="firstSection" id="home">
+    <div class="leftSection">
+        Hi, My name is <span class="purple">Harsh</span>
+        <div>and I am a passionate</div>
+        <span id="element"></span>
+
+        <!-- BUTTONS ROW -->
+        <div class="btn-row">
+
+    <!-- Resume download — replace "resume.pdf" with your actual file name -->
+    <a href="resume.pdf" download class="btn-primary">
+        Download Resume
+    </a>
+
+    <!-- LinkedIn — replace YOUR_USERNAME with your LinkedIn profile username -->
+    <a href="https://linkedin.com/in/harshm11" target="_blank" class="btn-social" aria-label="LinkedIn">
+        <img src="linkedin-logo.webp" alt="LinkedIn" class="linkedin-icon">
+    </a>
+
+    <!-- Instagram — replace YOUR_USERNAME with your Instagram handle -->
+    <a href="https://instagram.com/xx_harsh_u/" target="_blank" class="btn-social" aria-label="Instagram">
+        <img src="instagram-logo.png" alt="Instagram" class="instagram-icon">
+    </a>
+
+</div>
+        </div>
+    </div>
+
+    <div class="rightSection">
+        <!-- PHOTO: replace "photo.webp" with your actual photo file name -->
+        <img src="photo.webp" alt="Harsh's Photo" style="width:100%; max-width:500px; height:auto;">
+    </div>
+</section>
+
+<hr>
+<hr>
+
+<!-- Work Experience Section -->
+<section class="workSection" id="work">
+  <p class="we-label">Career</p>
+  <h2 class="we-heading">Work <span class="purple">Experience</span></h2>
+
+  <div class="timeline">
+    <div class="exp-card">
+      <div class="timeline-dot"></div>
+      <div class="card-top">
+        <div class="logo-box">
+          <img src="jyesta-logo.png" alt="Jyesta logo">
+        </div>
+        <div class="card-meta">
+          <h3>Full Stack Web Development Intern</h3>
+          <p class="company-name">Jyesta Corporate Entity</p>
+          <div class="badge-row">
+            <span class="badge badge-duration">June 2026 – Present</span>
+            <span class="badge badge-type">Internship</span>
+            <span class="badge badge-current">● Active</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-divider"></div>
+      <ul class="bullets">
+        <li>Built and maintained responsive web applications using <strong>HTML, CSS & JavaScript</strong>.</li>
+        <li>Developed backend APIs with <strong>Node.js & Express</strong>, handling auth and data flow.</li>
+        <li>Integrated <strong>MongoDB & SQL</strong> databases for dynamic data management.</li>
+        <li>Collaborated on UI/UX improvements, boosting performance and usability across devices.</li>
+      </ul>
+      <div class="tech-row">
+        <span class="tech-pill">HTML</span>
+        <span class="tech-pill">CSS</span>
+        <span class="tech-pill">JavaScript</span>
+        <span class="tech-pill">Node.js</span>
+        <span class="tech-pill">Express</span>
+        <span class="tech-pill">MongoDB</span>
+        <span class="tech-pill">SQL</span>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+<hr>
+<!-- Skills Section -->
+<section class="skillsSection" id="skills">
+  <p class="sk-label">What I work with</p>
+  <h2 class="sk-heading">My <span class="purple">Skills</span></h2>
+  <p class="sk-sub">Crafting seamless UI/UX and clean code</p>
+
+  <div class="sk-grid">
+
+    <!-- CARD 1: Core Skills (no logos) -->
+    <div class="sk-card">
+      <h3>Core Skills</h3>
+      <div class="sk-pills">
+        <div class="sk-pill">UI/UX Layout</div>
+        <div class="sk-pill">Frontend Dev</div>
+        <div class="sk-pill">Responsive Design</div>
+      </div>
+    </div>
+
+    <!-- CARD 2: Frontend Tech -->
+    <div class="sk-card">
+      <h3>Frontend Tech</h3>
+      <div class="sk-pills">
+        <!-- LOGO: HTML5 logo -->
+        <div class="sk-pill"><img src="html-logo.webp" alt="HTML">HTML</div>
+        <!-- LOGO: CSS3 logo -->
+        <div class="sk-pill"><img src="css-logo.png" alt="CSS">CSS</div>
+        <!-- LOGO: JavaScript logo -->
+        <div class="sk-pill"><img src="js-logo.jpg" alt="JavaScript">JavaScript</div>
+      </div>
+    </div>
+
+    <!-- CARD 3: Backend Tech & Skills -->
+    <div class="sk-card">
+      <h3>Backend Tech & Skills</h3>
+      <div class="sk-pills">
+        <!-- LOGO: MongoDB logo -->
+        <div class="sk-pill"><img src="mongodb-logo.jpg" alt="MongoDB">MongoDB</div>
+        <!-- LOGO: Express.js logo -->
+        <div class="sk-pill"><img src="expressjs-logo.png" alt="Express.js">Express.js</div>
+        <!-- LOGO: React.js logo -->
+        <div class="sk-pill"><img src="react-logo.png" alt="React.js">React.js</div>
+        <!-- LOGO: Node.js logo -->
+        <div class="sk-pill"><img src="nodejs-logo.png" alt="Node.js">Node.js</div>
+      </div>
+    </div>
+
+    <!-- CARD 4: AI Technologies -->
+    <div class="sk-card">
+      <h3>AI Technologies</h3>
+      <div class="sk-pills">
+        <!-- LOGO: Claude logo -->
+        <div class="sk-pill"><img src="claude-logo.webp" alt="Claude">Claude</div>
+        <!-- LOGO: NotebookLM logo -->
+        <div class="sk-pill"><img src="notebook-logo.jpg" alt="NotebookLM">NotebookLM</div>
+        <!-- LOGO: GitHub Copilot logo -->
+        <div class="sk-pill"><img src="copilot-logo.webp" alt="Copilot">Copilot</div>
+        <!-- LOGO: ChatGPT logo -->
+        <div class="sk-pill"><img src="chatgpt-logo.jpg" alt="ChatGPT">ChatGPT</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<hr>
+<hr>
+
+<!-- Contact Section -->
+<section class="contactSection" id="contact">
+  <p class="ct-label">Get in touch</p>
+  <h2 class="ct-heading">Let's <span class="purple">Talk</span></h2>
+  <p class="ct-desc">Have a project in mind or just want to say hi? My inbox is always open — I'll get back to you as soon as I can.</p>
+
+  <div class="ct-card">
+    <div class="ct-row">
+      <div class="ct-item">
+        <!-- LOGO: add an email/envelope icon, e.g. "email-icon.png" -->
+        <div class="ct-icon"><img src="gmail-logo.webp" alt="Email"></div>
+        <!-- replace with your actual email -->
+        harsh952945@gmail.com
+      </div>
+      <div class="ct-item">
+        <!-- LOGO: add a location pin icon, e.g. "location-icon.png" -->
+        <div class="ct-icon"><img src="location-logo.jpg" alt="Location"></div>
+        <!-- replace with your actual city/country -->
+        Jalgaon, Maharashtra, India
+      </div>
+    </div>
+
+    <div class="ct-divider"></div>
+
+    <div class="ct-btn-row">
+      <!-- replace with your actual email -->
+      <a href="mailto:harsh952945@gmail.com" class="ct-btn-primary">Say Hello</a>
+    </div>
+  </div>
+
+  <p class="ct-foot">© 2026 Harsh Mali. All rights reserved.</p>
+</section>
+    </main>
+     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+     <!-- Setup and start animation! -->
+  <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+   
+</body>
+</html>
