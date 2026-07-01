@@ -461,3 +461,48 @@
     #element { font-size: 1.1rem; }
     .rightSection img { max-width: 180px !important; }
 }
+
+/* ===== MOBILE HERO FIX ===== */
+@media (max-width: 768px) {
+    .firstSection {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin: 30px auto;
+        padding: 0 24px;
+        gap: 24px;
+    }
+
+    .leftSection {
+        width: 100%;
+        font-size: 1.4rem;  /* much smaller on mobile */
+        line-height: 1.4;
+    }
+
+    #element {
+        font-size: 1.4rem;
+    }
+
+    .rightSection {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rightSection img {
+        max-width: 200px !important;
+        width: 100% !important;
+    }
+
+    .btn-row {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .leftSection {
+        font-size: 1.2rem;
+    }
+
+    #element {
+        font-size: 1.2rem;
+    }
+}
