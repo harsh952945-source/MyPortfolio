@@ -48,15 +48,12 @@
     transform: translateY(-2px);
 }
 
-/* Remove the filter — Instagram needs its original colors */
 .social-icon {
     width: 26px;
     height: 26px;
     object-fit: contain;
-    /* NO filter here anymore */
 }
 
-/* Add this separately for LinkedIn icon to hide white corners */
 .linkedin-icon {
     width: 30px;
     height: 30px;
@@ -64,7 +61,6 @@
     border-radius: 50%;
 }
 
-/* Instagram stays square with rounded corners */
 .instagram-icon {
     width: 26px;
     height: 26px;
@@ -72,352 +68,321 @@
     border-radius: 6px;
 }
 
-
-
+/* WORK EXPERIENCE */
 .workSection {
-  padding: 60px 80px;
-  max-width: 900px;
-  margin: 0 auto;
+    padding: 60px 80px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .we-label {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  color: blueviolet;
-  text-transform: uppercase;
-  margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: blueviolet;
+    text-transform: uppercase;
+    margin-bottom: 8px;
 }
 
 .we-heading {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 48px;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 48px;
 }
 
 .timeline {
-  position: relative;
-  padding-left: 32px;
+    position: relative;
+    padding-left: 32px;
 }
 
 .timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 8px;
-  bottom: 8px;
-  width: 2px;
-  background: linear-gradient(to bottom, blueviolet, rgba(138,43,226,0.1));
-  border-radius: 2px;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, blueviolet, rgba(138,43,226,0.1));
+    border-radius: 2px;
 }
 
 .exp-card {
-  position: relative;
-  background: rgb(18, 18, 62);
-  border: 1px solid rgba(138, 43, 226, 0.25);
-  border-radius: 14px;
-  padding: 28px;
-  margin-bottom: 24px;
-  transition: border-color 0.25s;
+    position: relative;
+    background: rgb(18, 18, 62);
+    border: 1px solid rgba(138, 43, 226, 0.25);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 24px;
+    transition: border-color 0.25s;
 }
 
 .exp-card:hover { border-color: rgba(138, 43, 226, 0.6); }
 
 .timeline-dot {
-  position: absolute;
-  left: -40px;
-  top: 30px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: blueviolet;
-  border: 3px solid rgb(0, 0, 33);
-  box-shadow: 0 0 0 2px blueviolet;
+    position: absolute;
+    left: -40px;
+    top: 30px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: blueviolet;
+    border: 3px solid rgb(0, 0, 33);
+    box-shadow: 0 0 0 2px blueviolet;
 }
 
 .card-top { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
 
 .logo-box {
-  width: 52px;
-  height: 52px;
-  border-radius: 10px;
-  background: rgba(138, 43, 226, 0.12);
-  border: 1px solid rgba(138, 43, 226, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  overflow: hidden;
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: rgba(138, 43, 226, 0.12);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
 .logo-box img { width: 36px; height: 36px; object-fit: contain; }
-
 .card-meta h3 { font-size: 1.05rem; font-weight: 600; margin: 0 0 3px; }
-
 .company-name { font-size: 0.88rem; color: blueviolet; font-weight: 500; margin: 0 0 4px; }
-
 .badge-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-
 .badge { font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
 .badge-duration { background: rgba(138,43,226,0.12); color: rgba(180,150,255,0.9); border: 1px solid rgba(138,43,226,0.2); }
 .badge-type     { background: rgba(0,200,120,0.08);  color: rgba(80,220,150,0.9);  border: 1px solid rgba(0,200,120,0.2); }
 .badge-current  { background: rgba(0,200,100,0.1);   color: #4ade80;               border: 1px solid rgba(74,222,128,0.3); }
-
 .card-divider { height: 1px; background: rgba(138,43,226,0.15); margin: 18px 0; }
 
 .bullets { list-style: none; padding: 0; margin: 0; }
 .bullets li {
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.72);
-  padding: 5px 0 5px 20px;
-  position: relative;
-  line-height: 1.6;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.72);
+    padding: 5px 0 5px 20px;
+    position: relative;
+    line-height: 1.6;
 }
 .bullets li::before { content: '▹'; position: absolute; left: 0; color: blueviolet; }
 .bullets li strong { color: #c4b5fd; }
 
 .tech-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .tech-pill {
-  font-size: 11px;
-  font-weight: 500;
-  padding: 4px 12px;
-  border-radius: 20px;
-  background: rgba(138,43,226,0.08);
-  color: rgba(200,170,255,0.9);
-  border: 1px solid rgba(138,43,226,0.2);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(138,43,226,0.08);
+    color: rgba(200,170,255,0.9);
+    border: 1px solid rgba(138,43,226,0.2);
 }
 
+/* SKILLS */
 .skillsSection {
-  padding: 60px 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .sk-label {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  color: blueviolet;
-  text-transform: uppercase;
-  margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: blueviolet;
+    text-transform: uppercase;
+    margin-bottom: 8px;
 }
 
 .sk-heading {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 8px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
 }
 
 .sk-sub {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.55);
-  margin-bottom: 44px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 44px;
 }
 
 .sk-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  text-align: left;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    text-align: left;
 }
 
 .sk-card {
-  background: rgb(18, 18, 62);
-  border: 1px solid rgba(138, 43, 226, 0.25);
-  border-radius: 14px;
-  padding: 22px;
-  transition: border-color 0.2s;
+    background: rgb(18, 18, 62);
+    border: 1px solid rgba(138, 43, 226, 0.25);
+    border-radius: 14px;
+    padding: 22px;
+    transition: border-color 0.2s;
 }
 
-.sk-card:hover {
-  border-color: rgba(138, 43, 226, 0.6);
-}
+.sk-card:hover { border-color: rgba(138, 43, 226, 0.6); }
 
 .sk-card h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
-  margin: 0 0 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 16px;
 }
 
-.sk-pills {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+.sk-pills { display: flex; flex-direction: column; gap: 10px; }
 
 .sk-pill {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(138, 43, 226, 0.08);
-  border: 1px solid rgba(138, 43, 226, 0.2);
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.78);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(138, 43, 226, 0.08);
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.78);
 }
 
 .sk-pill img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-  flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
-
+/* CONTACT */
 .contactSection {
-  padding: 70px 40px;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+    padding: 70px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .ct-label {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  color: blueviolet;
-  text-transform: uppercase;
-  margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: blueviolet;
+    text-transform: uppercase;
+    margin-bottom: 8px;
 }
 
 .ct-heading {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 14px;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 14px;
 }
 
 .ct-desc {
-  font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.6);
-  max-width: 480px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 480px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
 }
 
 .ct-card {
-  background: rgb(18, 18, 62);
-  border: 1px solid rgba(138, 43, 226, 0.25);
-  border-radius: 16px;
-  padding: 36px;
+    background: rgb(18, 18, 62);
+    border: 1px solid rgba(138, 43, 226, 0.25);
+    border-radius: 16px;
+    padding: 36px;
 }
 
 .ct-row {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .ct-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.78);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.78);
 }
 
 .ct-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 9px;
-  background: rgba(138, 43, 226, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    background: rgba(138, 43, 226, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.ct-icon img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
+.ct-icon img { width: 18px; height: 18px; object-fit: contain; }
 
 .ct-divider {
-  height: 1px;
-  background: rgba(138, 43, 226, 0.15);
-  margin: 0 0 30px;
+    height: 1px;
+    background: rgba(138, 43, 226, 0.15);
+    margin: 0 0 30px;
 }
 
 .ct-btn-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ct-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 28px;
-  background: blueviolet;
-  color: white;
-  border: 2px solid blueviolet;
-  border-radius: 8px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: transform 0.2s, opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: blueviolet;
+    color: white;
+    border: 2px solid blueviolet;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 .ct-btn-primary:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
 
 .ct-foot {
-  margin-top: 50px;
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.35);
+    margin-top: 50px;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.35);
 }
 
-/* ============ RESPONSIVE ============ */
-
-/* Tablet — 900px */
+/* RESPONSIVE — only non-hero breakpoints here */
 @media (max-width: 900px) {
     .sk-grid { grid-template-columns: repeat(2, 1fr); }
-    .firstSection { padding: 0 30px; }
     .workSection { padding: 60px 40px; }
 }
 
-/* Tablet — 768px */
 @media (max-width: 768px) {
-    /* NAV */
-    nav { position: relative; flex-wrap: wrap; height: auto; padding: 16px 20px; justify-content: space-between; }
-    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { width: 25px; height: 2px; background: white; border-radius: 2px; }
-    .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; padding: 16px 0 8px; }
-    .nav-links.open { display: flex; }
-    nav ul { flex-direction: column; align-items: center; gap: 10px; }
-    nav ul li { margin: 0; }
-    nav ul li a { font-size: 16px; }
-
-    /* HERO */
-    .firstSection { flex-direction: column-reverse; text-align: center; margin: 40px auto; padding: 0 24px; gap: 32px; }
-    .leftSection { width: 100%; font-size: 1.8rem; }
-    .firstSection > div { width: 100%; }
-    .rightSection { display: flex; justify-content: center; }
-    .rightSection img { max-width: 300px !important; }
-    #element { font-size: 1.8rem; }
-    .btn-row { justify-content: center; }
-
-    /* WORK */
     .workSection { padding: 50px 24px; }
-
-    /* SKILLS */
     .skillsSection { padding: 50px 24px; }
-
-    /* CONTACT */
     .contactSection { padding: 50px 24px; }
     .ct-row { flex-direction: column; align-items: center; gap: 16px; }
     .ct-card { padding: 28px 20px; }
+    .card-top { flex-wrap: wrap; }
+}
 
-    hr { margin: 0 20px; }
+@media (max-width: 480px) {
+    .sk-grid { grid-template-columns: 1fr; }
+    .workSection { padding: 40px 16px; }
+    .skillsSection { padding: 40px 16px; }
+    .contactSection { padding: 40px 16px; }
+    .exp-card { padding: 18px 14px; }
+    .card-top { flex-direction: column; align-items: flex-start; }
+    .timeline { padding-left: 24px; }
+    .timeline-dot { left: -32px; width: 13px; height: 13px; top: 24px; }
+    .we-heading { font-size: 1.6rem; margin-bottom: 32px; }
+    .ct-card { padding: 22px 16px; }
 }
 
