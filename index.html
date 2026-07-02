@@ -85,6 +85,109 @@
         * {
             box-sizing: border-box;
         }
+
+        /* ===== TABLET & MOBILE ===== */
+@media (max-width: 768px) {
+
+    /* NAV */
+    nav {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 14px 20px;
+        justify-content: space-between;
+    }
+    .hamburger { display: flex; }
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 0;
+    }
+    .nav-links.open { display: flex; }
+    nav ul { flex-direction: column; align-items: center; gap: 10px; }
+    nav ul li { margin: 0; }
+    nav ul li a { font-size: 16px; }
+
+    /* HERO — stacked, centered */
+    .firstSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 36px auto;
+        padding: 0 24px;
+        gap: 0;
+    }
+
+    /* Photo — circular with glow ring */
+    .rightSection {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 28px;
+    }
+
+    .rightSection img {
+        width: 150px !important;
+        height: 150px !important;
+        max-width: 150px !important;
+        object-fit: cover;
+        border-radius: 50% !important;
+        border: 3px solid blueviolet;
+        box-shadow: 0 0 0 6px rgba(138, 43, 226, 0.12),
+                    0 0 30px rgba(138, 43, 226, 0.2);
+    }
+
+    /* Text */
+    .leftSection {
+        order: 2;
+        width: 100%;
+        font-size: 1.65rem;
+        line-height: 1.25;
+    }
+
+    #element { font-size: 1.1rem; }
+
+    .btn-row {
+        justify-content: center;
+        margin-top: 24px;
+        gap: 10px;
+    }
+
+    .btn-primary {
+        background: blueviolet;
+        font-size: 13px;
+        padding: 10px 22px;
+    }
+}
+
+/* ===== MOBILE — 480px ===== */
+@media (max-width: 480px) {
+    .firstSection { padding: 0 18px; margin: 28px auto; }
+
+    .rightSection img {
+        width: 130px !important;
+        height: 130px !important;
+        max-width: 130px !important;
+    }
+
+    .leftSection { font-size: 1.4rem; }
+    #element { font-size: 1rem; }
+    .left { font-size: 15px; }
+    .btn-primary { font-size: 12px; padding: 9px 18px; }
+}
+
+/* ===== VERY SMALL — 360px ===== */
+@media (max-width: 360px) {
+    .leftSection { font-size: 1.2rem; }
+    #element { font-size: 0.95rem; }
+
+    .rightSection img {
+        width: 110px !important;
+        height: 110px !important;
+        max-width: 110px !important;
+    }
+}
     </style>
 </head>
 <body>
