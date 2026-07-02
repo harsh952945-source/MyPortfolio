@@ -5,401 +5,303 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harsh - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             background-color: rgb(0, 0, 33);
             color: white;
             font-family: 'Poppins', sans-serif;
         }
 
+        /* NAV */
         nav {
             display: flex;
             justify-content: space-around;
             align-items: center;
             height: 70px;
             background-color: rgb(18, 18, 62);
+            padding: 0 20px;
         }
+        nav ul { display: flex; justify-content: center; }
+        nav ul li { list-style: none; margin: 0 23px; }
+        nav ul li a { text-decoration: none; color: white; font-size: 18px; }
+        nav ul li a:hover { color: rgb(152, 152, 225); }
+        .left { font-size: 20px; font-weight: 600; }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
+        /* Hamburger hidden on desktop */
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .hamburger span {
+            width: 25px; height: 2px; background: white;
+            border-radius: 2px; display: block;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
+        .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .nav-links { display: flex; }
 
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        nav ul li a {
-           text-decoration: none;
-            color: white;
-            font-size: 18px;
-        }
-
-        nav ul li a:hover {
-           color: rgb(152, 152, 225);
-           font-size: 1.03rem;
-        }
-
-        .left {
-            font-size: 20px;
-            font-weight: 600;
-        }
-
+        /* HERO — desktop */
         .firstSection {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 80px 0;
+            margin: 80px auto;
+            max-width: 1100px;
+            padding: 0 40px;
+            gap: 40px;
+        }
+        .leftSection { width: 50%; font-size: 2.5rem; line-height: 1.3; }
+        .rightSection img { width: 100%; max-width: 420px; height: auto; border-radius: 12px; }
+        .purple { color: blueviolet; }
+        #element { font-size: 2.5rem; color: blueviolet; display: block; min-height: 50px; }
+
+        /* ===== TABLET — 768px ===== */
+        @media (max-width: 768px) {
+            /* NAV */
+            nav { flex-wrap: wrap; height: auto; padding: 14px 20px; justify-content: space-between; }
+            .hamburger { display: flex; }
+            .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; padding: 12px 0; }
+            .nav-links.open { display: flex; }
+            nav ul { flex-direction: column; align-items: center; gap: 10px; }
+            nav ul li { margin: 0; }
+            nav ul li a { font-size: 16px; }
+
+            /* HERO */
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin: 36px auto;
+                padding: 0 24px;
+                gap: 0;
+            }
+
+            /* photo on top, circular */
+            .rightSection {
+                order: 1;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 24px;
+            }
+            .rightSection img {
+                width: 140px !important;
+                height: 140px !important;
+                max-width: 140px !important;
+                object-fit: cover;
+                border-radius: 50% !important;
+                border: 3px solid blueviolet;
+                box-shadow: 0 0 0 6px rgba(138,43,226,0.12), 0 0 30px rgba(138,43,226,0.2);
+            }
+
+            /* text below photo */
+            .leftSection {
+                order: 2;
+                width: 100%;
+                font-size: 1.3rem;
+                line-height: 1.4;
+            }
+            #element { font-size: 1.1rem; }
+
+            /* buttons in a row, centered */
+            .btn-row {
+                flex-direction: row !important;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 20px;
+                gap: 10px;
+            }
+            .btn-primary { font-size: 13px; padding: 10px 20px; background: blueviolet; }
+            .btn-social { width: 42px; height: 42px; }
         }
 
-        .firstSection > div {
-           width: 30%;
+        /* ===== MOBILE — 480px ===== */
+        @media (max-width: 480px) {
+            .firstSection { padding: 0 16px; margin: 24px auto; }
+            .leftSection { font-size: 1.15rem; }
+            #element { font-size: 1rem; }
+            .left { font-size: 15px; }
+            .rightSection img {
+                width: 120px !important;
+                height: 120px !important;
+                max-width: 120px !important;
+            }
+            .btn-primary { font-size: 12px; padding: 9px 16px; }
         }
 
-        .leftSection {
-            width: 50%;
-            font-size: 2.5rem;           
+        /* ===== VERY SMALL — 360px ===== */
+        @media (max-width: 360px) {
+            .leftSection { font-size: 1rem; }
+            #element { font-size: 0.9rem; }
+            .rightSection img {
+                width: 100px !important;
+                height: 100px !important;
+                max-width: 100px !important;
+            }
         }
-
-        .purple {
-            color: blueviolet;
-        }
-
-        #element {
-            font-size: 2.5rem;
-            color: blueviolet;
-        }
-
-        .hamburger {
-            display: none;
-        }
-        * {
-            box-sizing: border-box;
-        }
-
-        /* ===== TABLET & MOBILE ===== */
-@media (max-width: 768px) {
-
-    /* NAV */
-    nav {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 14px 20px;
-        justify-content: space-between;
-    }
-    .hamburger { display: flex; }
-    .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 12px 0;
-    }
-    .nav-links.open { display: flex; }
-    nav ul { flex-direction: column; align-items: center; gap: 10px; }
-    nav ul li { margin: 0; }
-    nav ul li a { font-size: 16px; }
-
-    /* HERO — stacked, centered */
-    .firstSection {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin: 36px auto;
-        padding: 0 24px;
-        gap: 0;
-    }
-
-    /* Photo — circular with glow ring */
-    .rightSection {
-        order: 1;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 28px;
-    }
-
-    .rightSection img {
-        width: 150px !important;
-        height: 150px !important;
-        max-width: 150px !important;
-        object-fit: cover;
-        border-radius: 50% !important;
-        border: 3px solid blueviolet;
-        box-shadow: 0 0 0 6px rgba(138, 43, 226, 0.12),
-                    0 0 30px rgba(138, 43, 226, 0.2);
-    }
-
-    /* Text */
-    .leftSection {
-        order: 2;
-        width: 100%;
-        font-size: 1.65rem;
-        line-height: 1.25;
-    }
-
-    #element { font-size: 1.1rem; }
-
-    .btn-row {
-        justify-content: center;
-        margin-top: 24px;
-        gap: 10px;
-    }
-
-    .btn-primary {
-        background: blueviolet;
-        font-size: 13px;
-        padding: 10px 22px;
-    }
-}
-
-/* ===== MOBILE — 480px ===== */
-@media (max-width: 480px) {
-    .firstSection { padding: 0 18px; margin: 28px auto; }
-
-    .rightSection img {
-        width: 130px !important;
-        height: 130px !important;
-        max-width: 130px !important;
-    }
-
-    .leftSection { font-size: 1.4rem; }
-    #element { font-size: 1rem; }
-    .left { font-size: 15px; }
-    .btn-primary { font-size: 12px; padding: 9px 18px; }
-}
-
-/* ===== VERY SMALL — 360px ===== */
-@media (max-width: 360px) {
-    .leftSection { font-size: 1.2rem; }
-    #element { font-size: 0.95rem; }
-
-    .rightSection img {
-        width: 110px !important;
-        height: 110px !important;
-        max-width: 110px !important;
-    }
-}
     </style>
 </head>
 <body>
-   <header>
+    <header>
         <nav>
-    <div class="left">Harsh's Portfolio</div>
-
-    <!-- Hamburger icon — shows only on mobile -->
-    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <!-- Add class "nav-links" to your existing right div -->
-    <div class="nav-links right">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Skills</a></li>
-            <li><a href="/">Projects</a></li>
-            <li><a href="/">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-    </header> 
+            <div class="left">Harsh's Portfolio</div>
+            <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-links right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#work">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <main>
-    <!-- First Section -->
+        <!-- Hero Section -->
         <section class="firstSection" id="home">
-    <div class="leftSection">
-        Hi, My name is <span class="purple">Harsh</span>
-        <div>and I am a passionate</div>
-        <span id="element"></span>
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Harsh</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="btn-row">
+                    <a href="resume.pdf" download class="btn-primary">Download Resume</a>
+                    <a href="https://linkedin.com/in/harshm11" target="_blank" class="btn-social" aria-label="LinkedIn">
+                        <img src="linkedin-logo.webp" alt="LinkedIn" class="linkedin-icon">
+                    </a>
+                    <a href="https://instagram.com/xx_harsh_u/" target="_blank" class="btn-social" aria-label="Instagram">
+                        <img src="instagram-logo.png" alt="Instagram" class="instagram-icon">
+                    </a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="photo.webp" alt="Harsh's Photo">
+            </div>
+        </section>
 
-        <!-- BUTTONS ROW -->
-        <div class="btn-row">
+        <hr>
 
-    <!-- Resume download — replace "resume.pdf" with your actual file name -->
-    <a href="resume.pdf" download class="btn-primary">
-        Download Resume
-    </a>
+        <!-- Work Experience Section -->
+        <section class="workSection" id="work">
+            <p class="we-label">Career</p>
+            <h2 class="we-heading">Work <span class="purple">Experience</span></h2>
+            <div class="timeline">
+                <div class="exp-card">
+                    <div class="timeline-dot"></div>
+                    <div class="card-top">
+                        <div class="logo-box">
+                            <img src="jyesta-logo.png" alt="Jyesta logo">
+                        </div>
+                        <div class="card-meta">
+                            <h3>Full Stack Web Development Intern</h3>
+                            <p class="company-name">Jyesta Corporate Entity</p>
+                            <div class="badge-row">
+                                <span class="badge badge-duration">June 2026 – Present</span>
+                                <span class="badge badge-type">Internship</span>
+                                <span class="badge badge-current">● Active</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-divider"></div>
+                    <ul class="bullets">
+                        <li>Built and maintained responsive web applications using <strong>HTML, CSS & JavaScript</strong>.</li>
+                        <li>Developed backend APIs with <strong>Node.js & Express</strong>, handling auth and data flow.</li>
+                        <li>Integrated <strong>MongoDB & SQL</strong> databases for dynamic data management.</li>
+                        <li>Collaborated on UI/UX improvements, boosting performance and usability across devices.</li>
+                    </ul>
+                    <div class="tech-row">
+                        <span class="tech-pill">HTML</span>
+                        <span class="tech-pill">CSS</span>
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">Express</span>
+                        <span class="tech-pill">MongoDB</span>
+                        <span class="tech-pill">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- LinkedIn — replace YOUR_USERNAME with your LinkedIn profile username -->
-    <a href="https://linkedin.com/in/harshm11" target="_blank" class="btn-social" aria-label="LinkedIn">
-        <img src="linkedin-logo.webp" alt="LinkedIn" class="linkedin-icon">
-    </a>
+        <hr>
 
-    <!-- Instagram — replace YOUR_USERNAME with your Instagram handle -->
-    <a href="https://instagram.com/xx_harsh_u/" target="_blank" class="btn-social" aria-label="Instagram">
-        <img src="instagram-logo.png" alt="Instagram" class="instagram-icon">
-    </a>
+        <!-- Skills Section -->
+        <section class="skillsSection" id="skills">
+            <p class="sk-label">What I work with</p>
+            <h2 class="sk-heading">My <span class="purple">Skills</span></h2>
+            <p class="sk-sub">Crafting seamless UI/UX and clean code</p>
+            <div class="sk-grid">
+                <div class="sk-card">
+                    <h3>Core Skills</h3>
+                    <div class="sk-pills">
+                        <div class="sk-pill">UI/UX Layout</div>
+                        <div class="sk-pill">Frontend Dev</div>
+                        <div class="sk-pill">Responsive Design</div>
+                    </div>
+                </div>
+                <div class="sk-card">
+                    <h3>Frontend Tech</h3>
+                    <div class="sk-pills">
+                        <div class="sk-pill"><img src="html-logo.webp" alt="HTML">HTML</div>
+                        <div class="sk-pill"><img src="css-logo.png" alt="CSS">CSS</div>
+                        <div class="sk-pill"><img src="js-logo.jpg" alt="JavaScript">JavaScript</div>
+                    </div>
+                </div>
+                <div class="sk-card">
+                    <h3>Backend Tech & Skills</h3>
+                    <div class="sk-pills">
+                        <div class="sk-pill"><img src="mongodb-logo.jpg" alt="MongoDB">MongoDB</div>
+                        <div class="sk-pill"><img src="expressjs-logo.png" alt="Express.js">Express.js</div>
+                        <div class="sk-pill"><img src="react-logo.png" alt="React.js">React.js</div>
+                        <div class="sk-pill"><img src="nodejs-logo.png" alt="Node.js">Node.js</div>
+                    </div>
+                </div>
+                <div class="sk-card">
+                    <h3>AI Technologies</h3>
+                    <div class="sk-pills">
+                        <div class="sk-pill"><img src="claude-logo.webp" alt="Claude">Claude</div>
+                        <div class="sk-pill"><img src="notebook-logo.jpg" alt="NotebookLM">NotebookLM</div>
+                        <div class="sk-pill"><img src="copilot-logo.webp" alt="Copilot">Copilot</div>
+                        <div class="sk-pill"><img src="chatgpt-logo.jpg" alt="ChatGPT">ChatGPT</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</div>
-        </div>
-    </div>
+        <hr>
 
-    <div class="rightSection">
-        <!-- PHOTO: replace "photo.webp" with your actual photo file name -->
-        <img src="photo.webp" alt="Harsh's Photo" style="width:100%; max-width:500px; height:auto;">
-    </div>
-</section>
-
-<hr>
-<hr>
-
-<!-- Work Experience Section -->
-<section class="workSection" id="work">
-  <p class="we-label">Career</p>
-  <h2 class="we-heading">Work <span class="purple">Experience</span></h2>
-
-  <div class="timeline">
-    <div class="exp-card">
-      <div class="timeline-dot"></div>
-      <div class="card-top">
-        <div class="logo-box">
-          <img src="jyesta-logo.png" alt="Jyesta logo">
-        </div>
-        <div class="card-meta">
-          <h3>Full Stack Web Development Intern</h3>
-          <p class="company-name">Jyesta Corporate Entity</p>
-          <div class="badge-row">
-            <span class="badge badge-duration">June 2026 – Present</span>
-            <span class="badge badge-type">Internship</span>
-            <span class="badge badge-current">● Active</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-divider"></div>
-      <ul class="bullets">
-        <li>Built and maintained responsive web applications using <strong>HTML, CSS & JavaScript</strong>.</li>
-        <li>Developed backend APIs with <strong>Node.js & Express</strong>, handling auth and data flow.</li>
-        <li>Integrated <strong>MongoDB & SQL</strong> databases for dynamic data management.</li>
-        <li>Collaborated on UI/UX improvements, boosting performance and usability across devices.</li>
-      </ul>
-      <div class="tech-row">
-        <span class="tech-pill">HTML</span>
-        <span class="tech-pill">CSS</span>
-        <span class="tech-pill">JavaScript</span>
-        <span class="tech-pill">Node.js</span>
-        <span class="tech-pill">Express</span>
-        <span class="tech-pill">MongoDB</span>
-        <span class="tech-pill">SQL</span>
-      </div>
-    </div>
-  </div>
-</section>
-<hr>
-<hr>
-<!-- Skills Section -->
-<section class="skillsSection" id="skills">
-  <p class="sk-label">What I work with</p>
-  <h2 class="sk-heading">My <span class="purple">Skills</span></h2>
-  <p class="sk-sub">Crafting seamless UI/UX and clean code</p>
-
-  <div class="sk-grid">
-
-    <!-- CARD 1: Core Skills (no logos) -->
-    <div class="sk-card">
-      <h3>Core Skills</h3>
-      <div class="sk-pills">
-        <div class="sk-pill">UI/UX Layout</div>
-        <div class="sk-pill">Frontend Dev</div>
-        <div class="sk-pill">Responsive Design</div>
-      </div>
-    </div>
-
-    <!-- CARD 2: Frontend Tech -->
-    <div class="sk-card">
-      <h3>Frontend Tech</h3>
-      <div class="sk-pills">
-        <!-- LOGO: HTML5 logo -->
-        <div class="sk-pill"><img src="html-logo.webp" alt="HTML">HTML</div>
-        <!-- LOGO: CSS3 logo -->
-        <div class="sk-pill"><img src="css-logo.png" alt="CSS">CSS</div>
-        <!-- LOGO: JavaScript logo -->
-        <div class="sk-pill"><img src="js-logo.jpg" alt="JavaScript">JavaScript</div>
-      </div>
-    </div>
-
-    <!-- CARD 3: Backend Tech & Skills -->
-    <div class="sk-card">
-      <h3>Backend Tech & Skills</h3>
-      <div class="sk-pills">
-        <!-- LOGO: MongoDB logo -->
-        <div class="sk-pill"><img src="mongodb-logo.jpg" alt="MongoDB">MongoDB</div>
-        <!-- LOGO: Express.js logo -->
-        <div class="sk-pill"><img src="expressjs-logo.png" alt="Express.js">Express.js</div>
-        <!-- LOGO: React.js logo -->
-        <div class="sk-pill"><img src="react-logo.png" alt="React.js">React.js</div>
-        <!-- LOGO: Node.js logo -->
-        <div class="sk-pill"><img src="nodejs-logo.png" alt="Node.js">Node.js</div>
-      </div>
-    </div>
-
-    <!-- CARD 4: AI Technologies -->
-    <div class="sk-card">
-      <h3>AI Technologies</h3>
-      <div class="sk-pills">
-        <!-- LOGO: Claude logo -->
-        <div class="sk-pill"><img src="claude-logo.webp" alt="Claude">Claude</div>
-        <!-- LOGO: NotebookLM logo -->
-        <div class="sk-pill"><img src="notebook-logo.jpg" alt="NotebookLM">NotebookLM</div>
-        <!-- LOGO: GitHub Copilot logo -->
-        <div class="sk-pill"><img src="copilot-logo.webp" alt="Copilot">Copilot</div>
-        <!-- LOGO: ChatGPT logo -->
-        <div class="sk-pill"><img src="chatgpt-logo.jpg" alt="ChatGPT">ChatGPT</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-<hr>
-<hr>
-
-<!-- Contact Section -->
-<section class="contactSection" id="contact">
-  <p class="ct-label">Get in touch</p>
-  <h2 class="ct-heading">Let's <span class="purple">Talk</span></h2>
-  <p class="ct-desc">Have a project in mind or just want to say hi? My inbox is always open — I'll get back to you as soon as I can.</p>
-
-  <div class="ct-card">
-    <div class="ct-row">
-      <div class="ct-item">
-        <!-- LOGO: add an email/envelope icon, e.g. "email-icon.png" -->
-        <div class="ct-icon"><img src="gmail-logo.webp" alt="Email"></div>
-        <!-- replace with your actual email -->
-        harsh952945@gmail.com
-      </div>
-      <div class="ct-item">
-        <!-- LOGO: add a location pin icon, e.g. "location-icon.png" -->
-        <div class="ct-icon"><img src="location-logo.jpg" alt="Location"></div>
-        <!-- replace with your actual city/country -->
-        Jalgaon, Maharashtra, India
-      </div>
-    </div>
-
-    <div class="ct-divider"></div>
-
-    <div class="ct-btn-row">
-      <!-- replace with your actual email -->
-      <a href="mailto:harsh952945@gmail.com" class="ct-btn-primary">Say Hello</a>
-    </div>
-  </div>
-
-  <p class="ct-foot">© 2026 Harsh Mali. All rights reserved.</p>
-</section>
+        <!-- Contact Section -->
+        <section class="contactSection" id="contact">
+            <p class="ct-label">Get in touch</p>
+            <h2 class="ct-heading">Let's <span class="purple">Talk</span></h2>
+            <p class="ct-desc">Have a project in mind or just want to say hi? My inbox is always open — I'll get back to you as soon as I can.</p>
+            <div class="ct-card">
+                <div class="ct-row">
+                    <div class="ct-item">
+                        <div class="ct-icon"><img src="gmail-logo.webp" alt="Email"></div>
+                        harsh952945@gmail.com
+                    </div>
+                    <div class="ct-item">
+                        <div class="ct-icon"><img src="location-logo.jpg" alt="Location"></div>
+                        Jalgaon, Maharashtra, India
+                    </div>
+                </div>
+                <div class="ct-divider"></div>
+                <div class="ct-btn-row">
+                    <a href="mailto:harsh952945@gmail.com" class="ct-btn-primary">Say Hello</a>
+                </div>
+            </div>
+            <p class="ct-foot">© 2026 Harsh Mali. All rights reserved.</p>
+        </section>
     </main>
-     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-     <!-- Setup and start animation! -->
-  <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-<script src="script.js"></script>
-   
+
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
